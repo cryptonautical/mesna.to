@@ -100,7 +100,7 @@ export async function sendOrderEmail(data: OrderEmailData) {
       service: "Gmail", // Use your email service name, e.g., 'Gmail', 'Outlook', or a custom SMTP host
       auth: {
       user: "aleksandar.coha@gmail.com", // Your email address
-      pass: "fgsj sqci rlbl omcm" // Your email account password or app-specific password
+      pass: process.env.GMAIL_PASS // Your email account password or app-specific password
    }
   });
     const mailOptions = {
