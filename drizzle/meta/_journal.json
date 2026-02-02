@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1769941307845,
+      "tag": "0000_unique_winter_soldier",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1769941699744,
+      "tag": "0001_noisy_hairball",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1769944861975,
+      "tag": "0002_ambitious_mulholland_black",
+      "breakpoints": true
+    }
+  ]
+}
