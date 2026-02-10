@@ -1,12 +1,16 @@
 import serverless from "serverless-http";
 import { createApp } from "../../server/_core/index";
 
-let handler: any;
+let handlerInstance: any;
 
-(async () => {
+const init = (async () => {
   // Build the Express app. Do not call listen(); serverless-http wraps it.
   const { app } = await createApp();
-  handler = serverless(app as any);
+  handlerInstance = serverless(app as any);
+  return handlerInstance;
 })();
 
-export { handler };
+export async function handler(event: any, context: any) {
+  await init;
+  return handlerInstance(event, context);
+}
