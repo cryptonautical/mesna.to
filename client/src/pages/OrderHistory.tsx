@@ -9,7 +9,7 @@ import { format } from "date-fns";
 export default function OrderHistory() {
   const { user, isAuthenticated } = useAuth();
   const [, navigate] = useLocation();
-  const { data: orders, isLoading } = trpc.orders.getByUser.useQuery(undefined, {
+  const { data: orders, isLoading } = trpc.orders.getByUser.useQuery({
     enabled: isAuthenticated,
   });
 
