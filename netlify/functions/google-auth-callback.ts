@@ -81,7 +81,7 @@ const handler: Handler = async (event, context) => {
   return {
     statusCode: 302,
     headers: {
-      'Set-Cookie': `session=${sessionToken}; Path=/; HttpOnly; SameSite=Lax; Max-Age=604800`,
+      'Set-Cookie': `app_session_id=${sessionToken}; Path=/; HttpOnly; SameSite=Lax; Max-Age=604800`,
       Location: '/',
     },
     body: '',
