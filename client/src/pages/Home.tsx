@@ -92,7 +92,7 @@ export default function Home() {
             )}
             {!isAuthenticated && (
               <a
-                href="/api/auth/google"
+                href="/.netlify/functions/google-auth"
                 className="p-2 rounded-lg hover:bg-accent-foreground/20 transition"
                 aria-label="Google Login"
                 title="Prijava sa Google"
