@@ -33,9 +33,11 @@ const handler: Handler = async (event, context) => {
     }).toString(),
   });
   if (!tokenRes.ok) {
+    const errorText = await tokenRes.text();
+    console.error('Google token exchange failed:', errorText);
     return {
       statusCode: 500,
-      body: 'Failed to exchange code for tokens',
+      body: 'Failed to exchange code for tokens: ' + errorText,
     };
   }
   const tokenData = await tokenRes.json();
