@@ -11,6 +11,14 @@ const init = (async () => {
 })();
 
 export async function handler(event: any, context: any) {
-  await init;
-  return handlerInstance(event, context);
+  // Wait for app initialization
+  const fn = await init;
+  
+  // Ensure the path is correct for the Express app (should be /api/...)
+  if (!event.rawPath.startsWith("/api")) {
+    event.rawPath = `/api${event.rawPath}`;
+    event.requestContext.http.rawPath = `/api${event.requestContext.http.rawPath}`;
+  }
+  
+  return fn(event, context);
 }
