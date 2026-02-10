@@ -16,12 +16,11 @@ interface Product {
   price: string;
   image: string;
 }
-
 export default function Home() {
   const [, navigate] = useLocation();
   const { theme, toggleTheme } = useTheme();
   const { cart, addToCart } = useCart();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout, refresh } = useAuth();
   const logoutMutation = trpc.auth.logout.useMutation();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -34,6 +33,17 @@ export default function Home() {
       setLoading(false);
     }
   }, [productsQuery.data]);
+
+  // Refetch user state after OAuth redirect
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('code')) {
+      refresh();
+      // Optionally, clean up the URL
+      url.searchParams.delete('code');
+      window.history.replaceState({}, document.title, url.pathname + url.search);
+    }
+  }, []);
 
   const handleAddToCart = (product: Product) => {
     addToCart({
