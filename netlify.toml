@@ -22,8 +22,3 @@
 	to = "/.netlify/functions/server"
 	status = 200
 	force = true
-
-[[redirects]]
- from = "/*"
- to = "/index.html"
- status = 200
