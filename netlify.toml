@@ -1,3 +1,14 @@
+[[redirects]]
+	from = "/api/auth/google"
+	to = "/.netlify/functions/google-auth"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/api/auth/google/callback"
+	to = "/.netlify/functions/google-auth-callback"
+	status = 200
+	force = true
 [build]
 	publish = "dist/public"
 	command = "pnpm build"
@@ -7,7 +18,7 @@
 	port = 8888
 
 [[redirects]]
-	from = "/api/*"
+	from = "/api/trpc/*"
 	to = "/.netlify/functions/server"
 	status = 200
 	force = true
