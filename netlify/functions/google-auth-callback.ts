@@ -15,6 +15,12 @@ const handler: Handler = async (event, context) => {
   }
 
   // Exchange code for tokens
+  const redirectUri = ENV.isProduction
+    ? (process.env.VITE_APP_URL
+        ? `${process.env.VITE_APP_URL.replace(/\/$/, '')}/api/auth/google/callback`
+        : 'https://mesna.to/api/auth/google/callback')
+    : 'http://localhost:8888/api/auth/google/callback';
+
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -22,9 +28,7 @@ const handler: Handler = async (event, context) => {
       code,
       client_id: ENV.googleClientId,
       client_secret: ENV.googleClientSecret,
-      redirect_uri: ENV.isProduction
-        ? `${process.env.VITE_APP_URL || ''}/api/auth/google/callback`
-        : 'http://localhost:8888/api/auth/google/callback',
+      redirect_uri: redirectUri,
       grant_type: 'authorization_code',
     }).toString(),
   });

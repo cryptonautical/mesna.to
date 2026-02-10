@@ -2,7 +2,9 @@ import { Handler } from '@netlify/functions';
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const REDIRECT_URI = process.env.NODE_ENV === 'production'
-  ? `${process.env.VITE_APP_URL || ''}/api/auth/google/callback`
+  ? (process.env.VITE_APP_URL
+      ? `${process.env.VITE_APP_URL.replace(/\/$/, '')}/api/auth/google/callback`
+      : 'https://mesna.to/api/auth/google/callback')
   : 'http://localhost:8888/api/auth/google/callback';
 
 const handler: Handler = async (event, context) => {
