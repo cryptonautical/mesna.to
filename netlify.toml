@@ -1,4 +1,14 @@
+[build]
+	publish = "dist/public"
+	command = "pnpm build"
+	functions = "dist/functions"
+
 [[redirects]]
  from = "/*"
  to = "/index.html"
  status = 200
+
+[[redirects]]
+	from = "/api/*"
+	to = "/.netlify/functions/server/:splat"
+	status = 200
