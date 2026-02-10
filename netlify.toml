@@ -16,3 +16,8 @@
 	to = "/.netlify/functions/server"
 	status = 200
 	force = true
+
+[[redirects]]
+	from = "/test-fn"
+	to = "/.netlify/functions/test"
+	status = 200
