@@ -7,17 +7,12 @@
 	port = 8888
 
 [[redirects]]
- from = "/*"
- to = "/index.html"
- status = 200
-
-[[redirects]]
-	from = "/api/*"
+	from = "/api/trpc/*"
 	to = "/.netlify/functions/server"
 	status = 200
 	force = true
 
 [[redirects]]
-	from = "/test-fn"
-	to = "/.netlify/functions/test"
-	status = 200
+ from = "/*"
+ to = "/index.html"
+ status = 200
