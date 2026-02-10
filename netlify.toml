@@ -7,7 +7,7 @@
 	port = 8888
 
 [[redirects]]
-	from = "/api/trpc/*"
+	from = "/api/*"
 	to = "/.netlify/functions/server"
 	status = 200
 	force = true
