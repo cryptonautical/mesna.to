@@ -79,7 +79,7 @@ async function sendMail({ customer, cart, totals }) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'test123@gmail.com',
+      user: 'aleksandar.coha@gmail.com',
       pass,
     },
   })
@@ -104,8 +104,8 @@ async function sendMail({ customer, cart, totals }) {
     .join('\n')
 
   await transporter.sendMail({
-    from: 'Mesna.to <test123@gmail.com>',
-    to: 'test123@gmail.com',
+    from: 'Mesna.to <aleksandar.coha@gmail.com>',
+    to: 'aleksandar.coha@gmail.com',
     subject,
     text,
   })

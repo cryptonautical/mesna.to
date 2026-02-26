@@ -215,6 +215,58 @@ function App() {
     [],
   )
 
+  const handleSubmitOrder = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsThankYou(false)
+    if (cartItems.length === 0) {
+      setSendError('Dodajte proizvode u korpu pre slanja narudžbine.')
+      return
+    }
+
+    setSendError(null)
+    setIsSendingOrder(true)
+
+    const formData = new FormData(e.currentTarget)
+    const payload = {
+      customer: {
+        name: String(formData.get('name') ?? ''),
+        phone: String(formData.get('phone') ?? ''),
+        address: String(formData.get('address') ?? ''),
+        note: String(formData.get('note') ?? ''),
+      },
+      cart: cartItems.map((item) => ({
+        name: item.product.name,
+        grams: item.grams,
+        price: item.product.price,
+      })),
+      totals: {
+        grams: totalGrams,
+        price: formatRsd(totalPrice),
+      },
+    }
+
+    try {
+      const response = await fetch('/.netlify/functions/order-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}))
+        throw new Error(data.message || 'Slanje emaila nije uspelo')
+      }
+
+      setIsThankYou(true)
+      setCartItems([])
+      e.currentTarget.reset()
+    } catch (error) {
+      setSendError(error instanceof Error ? error.message : 'Slanje emaila nije uspelo')
+    } finally {
+      setIsSendingOrder(false)
+    }
+  }
+
   const openAddModal = (product: Product) => {
     setPendingProduct(product)
     setPendingGrams(100)
@@ -235,7 +287,7 @@ function App() {
       <div className="absolute inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-brand/6 via-transparent to-transparent" aria-hidden />
 
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-10 sm:px-10 lg:px-12">
-        <header className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-stone-100/80 bg-white/80 px-6 py-4 backdrop-blur">
+        <header className="sticky top-4 z-30 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-stone-100/80 bg-white/80 px-6 py-4 backdrop-blur">
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-stone-100 bg-white shadow-card">
               <img src="/logo.png" alt="Mesna.to logo" className="h-10 w-10 object-contain" />
@@ -480,7 +532,7 @@ function App() {
                   <div>
                     <p className="font-semibold text-stone-900">{item.product.name}</p>
                     <p className="text-sm text-stone-600">
-                      {item.grams} g · {item.product.price} · {formatRsd((item.grams / 1000) * parsePriceToNumber(item.product.price))}
+                      {formatWeight(item.grams)} · {item.product.price} · {formatRsd((item.grams / 1000) * parsePriceToNumber(item.product.price))}
                     </p>
                   </div>
                   <button
@@ -522,14 +574,7 @@ function App() {
               </button>
             </div>
             <p className="mt-1 text-sm text-stone-600">Plaćanje pouzećem · Ukupno {formatRsd(totalPrice)}</p>
-            <form
-              className="mt-4 space-y-3"
-              onSubmit={(e) => {
-                e.preventDefault()
-                setIsThankYou(true)
-                setCartItems([])
-              }}
-            >
+            <form className="mt-4 space-y-3" onSubmit={handleSubmitOrder}>
               <label className="block text-sm font-semibold text-stone-800">
                 Ime i prezime
                 <input
@@ -573,10 +618,14 @@ function App() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5"
+                className="w-full rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+                disabled={isSendingOrder}
               >
-                Potvrdi narudžbinu
+                {isSendingOrder ? 'Šaljem narudžbinu…' : 'Potvrdi narudžbinu'}
               </button>
+              {/* {sendError && (
+                <p className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{sendError}</p>
+              )} */}
             </form>
             {isThankYou && (
               <div className="mt-4 rounded-xl border border-brand/20 bg-brand/5 px-4 py-3 text-sm text-brand-dark">
@@ -615,7 +664,7 @@ function App() {
                 >
                   {gramOptions.map((value) => (
                     <option key={value} value={value}>
-                      {value >= 1000 ? `${(value / 1000).toFixed(value % 1000 === 0 ? 0 : 2)} kg` : `${value} g`}
+                      {formatWeight(value)}
                     </option>
                   ))}
                 </select>
