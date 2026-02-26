@@ -113,11 +113,7 @@ const advantages = [
   {
     title: 'Partnerstva sa kuvarima',
     text: 'Kreirano uz sugestije kuhinja širom regiona da bi porcije bile tačne.',
-  },
-  {
-    title: 'Moderno mesarenje',
-    text: 'Primal, podprimal ili gotovi rezovi prilagođeni vašem meniju.',
-  },
+  }
 ]
 
 const StoryCard = () => (
@@ -182,7 +178,7 @@ function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
   const [isThankYou, setIsThankYou] = useState(false)
   const [isSendingOrder, setIsSendingOrder] = useState(false)
-  const [sendError, setSendError] = useState<string | null>(null)
+  // const [sendError, setSendError] = useState<string | null>(null)
   const [pendingProduct, setPendingProduct] = useState<Product | null>(null)
   const [pendingGrams, setPendingGrams] = useState(100)
   const bestSellers = useMemo(() => products.slice(0, 3), [])
@@ -218,12 +214,12 @@ function App() {
   const handleSubmitOrder = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsThankYou(false)
-    if (cartItems.length === 0) {
-      setSendError('Dodajte proizvode u korpu pre slanja narudžbine.')
-      return
-    }
+    // if (cartItems.length === 0) {
+    //   setSendError('Dodajte proizvode u korpu pre slanja narudžbine.')
+    //   return
+    // }
 
-    setSendError(null)
+    // setSendError(null)
     setIsSendingOrder(true)
 
     const formData = new FormData(e.currentTarget)
@@ -261,7 +257,7 @@ function App() {
       setCartItems([])
       e.currentTarget.reset()
     } catch (error) {
-      setSendError(error instanceof Error ? error.message : 'Slanje emaila nije uspelo')
+      // setSendError(error instanceof Error ? error.message : 'Slanje emaila nije uspelo')
     } finally {
       setIsSendingOrder(false)
     }
@@ -294,7 +290,7 @@ function App() {
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.32em] text-stone-500">Mesna.to</p>
-              <p className="font-semibold text-stone-900">Kurirano meso za moderne kuhinje</p>
+              <p className="font-semibold text-stone-900">Vrhunsko meso za moderne kuhinje</p>
             </div>
           </div>
           <nav className="flex flex-wrap items-center gap-3 text-sm font-semibold text-stone-700">
@@ -397,7 +393,7 @@ function App() {
               <h2 className="font-display text-3xl font-semibold">Doslednost susreće ukus</h2>
               <p className="text-lg text-stone-600">
                 Spremni rezovi, predvidivo sušenje i kutije sa jasnom deklaracijom porekla, težine i
-                datuma. Mise en place ostaje efikasan, gosti osećaju razliku.
+                datuma. Pravi domaćini osećaju razliku.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {advantages.map((item) => (
@@ -437,7 +433,7 @@ function App() {
             </div>
           </section>
 
-          <section className="grid gap-8 rounded-3xl border border-stone-100 bg-white/70 p-8 shadow-card lg:grid-cols-[0.8fr_1.2fr]">
+          {/* <section className="grid gap-8 rounded-3xl border border-stone-100 bg-white/70 p-8 shadow-card lg:grid-cols-[0.8fr_1.2fr]">
             <div className="space-y-3">
               <p className="text-sm uppercase tracking-[0.24em] text-brand-dark/80">Za šefove kuhinja</p>
               <h2 className="font-display text-3xl font-semibold">Logistika koja prati servis</h2>
@@ -463,9 +459,9 @@ function App() {
                 <p className="text-stone-600">Pošaljite porudžbenicu; potvrđujemo u roku od sat vremena.</p>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section id="contact" className="relative overflow-hidden rounded-3xl bg-brand text-white shadow-glow">
+          {/* <section id="contact" className="relative overflow-hidden rounded-3xl bg-brand text-white shadow-glow">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(243,199,118,0.25),transparent_35%)]" />
             <div className="relative grid gap-6 p-8 sm:grid-cols-[1.1fr_0.9fr] sm:p-10">
               <div className="space-y-3">
@@ -500,7 +496,7 @@ function App() {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
         </main>
 
         <footer className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-stone-200 pt-6 text-sm text-stone-600">
