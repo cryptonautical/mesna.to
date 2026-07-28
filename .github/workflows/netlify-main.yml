@@ -29,23 +29,16 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Link Netlify project
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
-        run: >-
-          npx --yes netlify-cli@26.2.0 link
-          --id="$NETLIFY_SITE_ID"
-          --auth="$NETLIFY_AUTH_TOKEN"
-
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
         run: >-
           npx --yes netlify-cli@26.2.0 deploy
           --prod
           --no-build
           --dir=dist
           --functions=netlify/functions
+          --site="$NETLIFY_SITE_ID"
           --auth="$NETLIFY_AUTH_TOKEN"
           --message="GitHub Actions deploy $GITHUB_SHA"
