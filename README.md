@@ -1,6 +1,6 @@
-# Mesnato storefront
+# mesna.to storefront
 
-Mobile-first storefront for Mesnato, with product selection by weight, a cart, cash-on-delivery checkout, and a Netlify email function.
+Mobile-first storefront for mesna.to, with product selection by weight, a cart, cash-on-delivery checkout, and a Netlify email function.
 
 ## Tech
 - React 19 with TypeScript

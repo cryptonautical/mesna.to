@@ -38,7 +38,7 @@ const products: Product[] = [
     badge: 'Najtraženije',
     description: 'Sočan suvi vrat punog, zaokruženog ukusa. Odličan za meze, sendviče i posluženja.',
     image: '/vrat.jpeg',
-    alt: 'Mesnato domaći suvi vrat, isečen i spreman za posluženje',
+    alt: 'mesna.to domaći suvi vrat, isečen i spreman za posluženje',
   },
   {
     name: 'Pečenica',
@@ -48,7 +48,7 @@ const products: Product[] = [
     origin: 'Srbija',
     description: 'Pečenica od pažljivo odabranog mesa, blagog mirisa dima i prijatne teksture.',
     image: '/pecenica.jpeg',
-    alt: 'Mesnato domaća suva pečenica u komadu',
+    alt: 'mesna.to domaća suva pečenica u komadu',
   },
   {
     name: 'Dimljena butkica',
@@ -58,7 +58,7 @@ const products: Product[] = [
     origin: 'Srbija',
     description: 'Dimljena butkica za sporo kuvanje, pasulj i bogata tradicionalna jela.',
     image: '/butkica.jpeg',
-    alt: 'Mesnato dimljena svinjska butkica vakumirana za isporuku',
+    alt: 'mesna.to dimljena svinjska butkica vakumirana za isporuku',
   },
   {
     name: 'Dimljena kolenica',
@@ -68,7 +68,7 @@ const products: Product[] = [
     origin: 'Srbija',
     description: 'Mesnata dimljena kolenica izraženog ukusa, spremna za vaša omiljena kuvana jela.',
     image: '/kolenica.jpeg',
-    alt: 'Mesnato domaća dimljena svinjska kolenica',
+    alt: 'mesna.to domaća dimljena svinjska kolenica',
   },
   {
     name: 'Sušeni but',
@@ -78,7 +78,7 @@ const products: Product[] = [
     origin: 'Srbija',
     description: 'Sušeni svinjski but čvrste teksture i punog ukusa, za bogatu dasku sa mezom.',
     image: '/but.jpeg',
-    alt: 'Mesnato sušeni svinjski but na drvenoj dasci',
+    alt: 'mesna.to sušeni svinjski but na drvenoj dasci',
   },
   {
     name: 'Domaća mast',
@@ -88,7 +88,7 @@ const products: Product[] = [
     origin: 'Srbija',
     description: 'Domaća svinjska mast za kuvanje, pečenje ili jednostavno posluženje na toplom hlebu.',
     image: '/mast.jpg',
-    alt: 'Mesnato bela domaća svinjska mast u drvenoj posudi',
+    alt: 'mesna.to bela domaća svinjska mast u drvenoj posudi',
   },
 ]
 
@@ -293,7 +293,7 @@ function App() {
 
       <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-cream/90 backdrop-blur-xl">
         <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-          <a href="#" className="flex items-center gap-3" aria-label="Mesnato početna stranica">
+          <a href="#" className="flex items-center gap-3" aria-label="mesna.to početna stranica">
             <img src="/logo.png" alt="" width="52" height="52" className="h-12 w-12 object-contain" />
             <div className="leading-none">
               <span className="block font-display text-2xl font-bold tracking-tight text-stone-900">
@@ -333,12 +333,12 @@ function App() {
           <div className="hero-orb hero-orb-right" aria-hidden="true" />
           <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-20 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-16 lg:px-8 lg:pb-28 lg:pt-20">
             <div className="relative z-10">
-              <p className="eyebrow">Mesnato · domaći ukus na klik</p>
+              <p className="eyebrow">mesna.to · domaći ukus na klik</p>
               <h1 className="mt-5 max-w-3xl font-display text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.03em] text-stone-900 sm:text-6xl lg:text-[4.5rem]">
                 Suvo i dimljeno meso <span className="text-brand">za pravu trpezu.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">
-                Mesnato donosi odabrane domaće proizvode direktno do vas. Izaberite proizvod i
+                mesna.to donosi odabrane domaće proizvode direktno do vas. Izaberite proizvod i
                 gramažu, a narudžbinu platite pouzećem.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -364,7 +364,7 @@ function App() {
               <div className="relative overflow-hidden rounded-[2rem] bg-stone-900 shadow-2xl sm:rounded-[2.5rem]">
                 <img
                   src="/vrat.jpeg"
-                  alt="Mesnato domaći suvi vrat pripremljen za meze"
+                  alt="mesna.to domaći suvi vrat pripremljen za meze"
                   width="920"
                   height="900"
                   fetchPriority="high"
@@ -393,7 +393,7 @@ function App() {
         <section id="ponuda" className="scroll-mt-28 border-y border-stone-200 bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="eyebrow justify-center">Mesnato ponuda</p>
+              <p className="eyebrow justify-center">mesna.to ponuda</p>
               <h2 className="section-title">Odaberite ukus domaćeg</h2>
               <p className="section-copy">
                 Jasna cena po kilogramu, količina po vašoj meri i jednostavno online poručivanje.
@@ -439,7 +439,7 @@ function App() {
             <div className="grid grid-cols-2 gap-3">
               <img
                 src="/pecenica.jpeg"
-                alt="Domaća suva pečenica iz Mesnato ponude"
+                alt="Domaća suva pečenica iz mesna.to ponude"
                 loading="lazy"
                 width="500"
                 height="650"
@@ -447,7 +447,7 @@ function App() {
               />
               <img
                 src="/but.jpeg"
-                alt="Domaći sušeni but iz Mesnato ponude"
+                alt="Domaći sušeni but iz mesna.to ponude"
                 loading="lazy"
                 width="500"
                 height="650"
@@ -455,12 +455,12 @@ function App() {
               />
             </div>
             <div>
-              <p className="eyebrow !text-gold">Šta je Mesnato?</p>
+              <p className="eyebrow !text-gold">Šta je mesna.to?</p>
               <h2 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
                 Domaći proizvodi, predstavljeni bez komplikovanja.
               </h2>
               <p className="mt-6 text-base leading-8 text-white/70 sm:text-lg">
-                Mesnato je online mesto za ljubitelje suvog i dimljenog svinjskog mesa. Naša ponuda
+                mesna.to je online mesto za ljubitelje suvog i dimljenog svinjskog mesa. Naša ponuda
                 okuplja prepoznatljive ukuse domaće trpeze — od suvog vrata i pečenice do dimljene
                 kolenice i domaće masti.
               </p>
@@ -482,11 +482,11 @@ function App() {
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <div className="text-center">
               <p className="eyebrow justify-center">Česta pitanja</p>
-              <h2 className="section-title">Sve o Mesnato poručivanju</h2>
+              <h2 className="section-title">Sve o mesna.to poručivanju</h2>
             </div>
             <div className="mt-10 divide-y divide-stone-200 border-y border-stone-200">
               {[
-                ['Kako se poručuju Mesnato proizvodi?', 'Izaberite proizvod, zatim gramažu i dodajte ga u korpu. U korpi proverite narudžbinu i unesite podatke za isporuku.'],
+                ['Kako se poručuju mesna.to proizvodi?', 'Izaberite proizvod, zatim gramažu i dodajte ga u korpu. U korpi proverite narudžbinu i unesite podatke za isporuku.'],
                 ['Koja je najmanja količina za poručivanje?', 'Za većinu proizvoda možete izabrati količinu već od 100 grama. Dostupne opcije videćete nakon što kliknete na „Izaberi“.'],
                 ['Kako se plaća narudžbina?', 'Plaćanje se vrši pouzećem, prilikom preuzimanja narudžbine.'],
                 ['Da li su cene prikazane po kilogramu?', 'Da. Na svakoj kartici proizvoda jasno je označena cena za jedan kilogram, a korpa automatski računa iznos za izabranu gramažu.'],
@@ -507,7 +507,7 @@ function App() {
       <footer className="border-t border-stone-800 bg-stone-900 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
-            <a href="#" className="flex items-center gap-3" aria-label="Mesnato početna stranica">
+            <a href="#" className="flex items-center gap-3" aria-label="mesna.to početna stranica">
               <img src="/logo.png" alt="" width="56" height="56" className="h-14 w-14 object-contain" />
               <div>
                 <p className="font-display text-2xl font-bold">mesna<span className="text-brand-light">.to</span></p>
@@ -522,7 +522,7 @@ function App() {
             </nav>
           </div>
           <div className="flex flex-col justify-between gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
-            <p>© {new Date().getFullYear()} Mesnato. Sva prava zadržana.</p>
+            <p>© {new Date().getFullYear()} mesna.to. Sva prava zadržana.</p>
             <p>mesna.to · Ukus domaćeg</p>
           </div>
         </div>
