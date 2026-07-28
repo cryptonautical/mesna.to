@@ -9,28 +9,25 @@ export default {
       },
       colors: {
         brand: {
-          DEFAULT: '#a3121d',
-          dark: '#6f0c15',
-          light: '#c32c35',
+          DEFAULT: '#aa1e22',
+          dark: '#7f1117',
+          light: '#e14b4f',
         },
         stone: {
-          50: '#f8f1e8',
-          100: '#f0e3d6',
-          300: '#d8c7ae',
-          600: '#4a3d34',
-          900: '#16100d',
+          50: '#f7f2ea',
+          100: '#eee6dc',
+          200: '#e2d7ca',
+          300: '#cbbdad',
+          400: '#9e8e80',
+          500: '#726459',
+          600: '#574b42',
+          700: '#3f3630',
+          800: '#2b2420',
+          900: '#1c1714',
         },
-        gold: '#f3c776',
-      },
-      boxShadow: {
-        card: '0 18px 50px -20px rgba(16, 16, 16, 0.45)',
-        glow: '0 0 0 1px rgba(163, 18, 29, 0.15), 0 25px 60px -35px rgba(0, 0, 0, 0.45)',
-      },
-      backgroundImage: {
-        grid: 'radial-gradient(circle at 1px 1px, rgba(22,16,13,0.14) 1px, transparent 0)',
+        gold: '#e6b464',
       },
     },
   },
   plugins: [],
 }
-

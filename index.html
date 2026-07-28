@@ -1,21 +1,149 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr-Latn">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#aa1e22" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <title>Mesnato | Domaće suvo i dimljeno meso online</title>
     <meta
       name="description"
-      content="Mesna.to — kurirano suvo i dimljeno svinjsko meso za šefove. Sečeno po meri i isporučeno u hladnom lancu."
+      content="Mesnato je online prodavnica domaćeg suvog i dimljenog mesa. Izaberite suvi vrat, pečenicu, dimljenu butkicu, kolenicu i gramažu po meri."
     />
-    <meta property="og:title" content="mesna.to — suvo i dimljeno svinjsko meso" />
+    <meta
+      name="keywords"
+      content="mesnato, mesna to, suvo meso, dimljeno meso, domaće meso, suvi vrat, pečenica, dimljena kolenica"
+    />
+    <link rel="canonical" href="https://mesna.to/" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mesnato" />
+    <meta property="og:title" content="Mesnato | Domaće suvo i dimljeno meso" />
     <meta
       property="og:description"
-      content="Autentične svinjske delicije, sušene i dimljene, po porudžbini i isporučene ohlađene."
+      content="Ukus domaćeg na klik. Izaberite proizvod i gramažu, a narudžbinu platite pouzećem."
     />
-    <meta property="og:type" content="website" />
-    <meta property="theme-color" content="#a3121d" />
-    <title>mesna.to — kurirano meso</title>
+    <meta property="og:url" content="https://mesna.to/" />
+    <meta property="og:image" content="https://mesna.to/vrat.jpeg" />
+    <meta property="og:image:alt" content="Mesnato domaći suvi vrat" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mesnato | Domaće suvo i dimljeno meso" />
+    <meta name="twitter:description" content="Domaće suvo i dimljeno meso uz jednostavno online poručivanje." />
+    <meta name="twitter:image" content="https://mesna.to/vrat.jpeg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://mesna.to/#organization",
+            "name": "Mesnato",
+            "alternateName": ["Mesna.to", "Mesna To"],
+            "url": "https://mesna.to/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://mesna.to/logo.png",
+              "width": 1024,
+              "height": 1024
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mesna.to/#website",
+            "url": "https://mesna.to/",
+            "name": "Mesnato",
+            "alternateName": "Mesna.to",
+            "inLanguage": "sr-Latn",
+            "publisher": { "@id": "https://mesna.to/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://mesna.to/#webpage",
+            "url": "https://mesna.to/",
+            "name": "Mesnato | Domaće suvo i dimljeno meso online",
+            "description": "Mesnato je online prodavnica domaćeg suvog i dimljenog mesa.",
+            "isPartOf": { "@id": "https://mesna.to/#website" },
+            "about": { "@id": "https://mesna.to/#organization" },
+            "inLanguage": "sr-Latn"
+          },
+          {
+            "@type": "ItemList",
+            "name": "Mesnato ponuda",
+            "numberOfItems": 6,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Product",
+                  "name": "Suvi vrat",
+                  "image": "https://mesna.to/vrat.jpeg",
+                  "description": "Domaći suvi vrat punog ukusa za meze i posluženja.",
+                  "brand": { "@type": "Brand", "name": "Mesnato" },
+                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "url": "https://mesna.to/#suvi-vrat" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Product",
+                  "name": "Pečenica",
+                  "image": "https://mesna.to/pecenica.jpeg",
+                  "brand": { "@type": "Brand", "name": "Mesnato" },
+                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "url": "https://mesna.to/#pecenica" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Product",
+                  "name": "Dimljena butkica",
+                  "image": "https://mesna.to/butkica.jpeg",
+                  "brand": { "@type": "Brand", "name": "Mesnato" },
+                  "offers": { "@type": "Offer", "price": "850", "priceCurrency": "RSD", "url": "https://mesna.to/#dimljena-butkica" }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Kako se poručuju Mesnato proizvodi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Izaberite proizvod i gramažu, dodajte ih u korpu i unesite podatke za isporuku."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kako se plaća Mesnato narudžbina?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plaćanje se vrši pouzećem, prilikom preuzimanja narudžbine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Da li su cene prikazane po kilogramu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Da. Cena je prikazana po kilogramu, a korpa računa iznos za izabranu gramažu."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,6 +1,6 @@
-# mesna.to storefront
+# Mesnato storefront
 
-React + Vite + Tailwind CSS landing page for a mesna.to-inspired meat storefront. Built mobile-first, Netlify-ready, with sample data and CTA flows for chefs.
+Mobile-first storefront for Mesnato, with product selection by weight, a cart, cash-on-delivery checkout, and a Netlify email function.
 
 ## Tech
 - React 19 with TypeScript
@@ -22,16 +22,17 @@ React + Vite + Tailwind CSS landing page for a mesna.to-inspired meat storefront
 5. Ensure Node 18+.
 
 ## Structure
-- `src/App.tsx` – main page layout, sections, and sample products
+- `src/App.tsx` – storefront, product data, cart, and checkout
 - `src/index.css` – Tailwind directives, fonts, base theming
 - `tailwind.config.js` – scan paths and custom theme
 - `netlify.toml` – deploy settings and SPA redirect
+- `public/robots.txt` and `public/sitemap.xml` – search crawler configuration
 
 ## Customizing
 - Update `products` in `src/App.tsx` with real catalog data.
 - Swap colors/typography in `tailwind.config.js`.
-- Replace CTA contacts in the contact section.
+- Update prices, product copy, and delivery information when they change.
 
 ## Notes
-- No backend or real cart; `Add bundle` only increments a placeholder counter.
-- All assets are CSS-based; no external images required.
+- The Netlify function requires a `GMAIL_PASS` environment variable.
+- Canonical URLs and structured data currently use `https://mesna.to/`.
