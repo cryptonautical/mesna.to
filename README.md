@@ -1,6 +1,6 @@
 # mesna.to storefront
 
-Mobile-first storefront for mesna.to, with product selection by weight, a cart, cash-on-delivery checkout, and a Netlify email function.
+Mobile-first storefront for mesna.to, with product selection by weight, a cart, cash-on-delivery checkout, and a Netlify email function. The production build prerenders the storefront so product and editorial content is available without JavaScript to search and AI crawlers.
 
 ## Tech
 - React 19 with TypeScript
@@ -27,6 +27,8 @@ Mobile-first storefront for mesna.to, with product selection by weight, a cart, 
 - `tailwind.config.js` – scan paths and custom theme
 - `netlify.toml` – deploy settings and SPA redirect
 - `public/robots.txt` and `public/sitemap.xml` – search crawler configuration
+- `public/llms.txt` – concise, machine-readable storefront facts for AI answer engines
+- `src/entry-server.tsx` and `scripts/prerender.mjs` – production HTML prerendering
 
 ## Customizing
 - Update `products` in `src/App.tsx` with real catalog data.
@@ -36,3 +38,4 @@ Mobile-first storefront for mesna.to, with product selection by weight, a cart, 
 ## Notes
 - The Netlify function requires a `GMAIL_PASS` environment variable.
 - Canonical URLs and structured data currently use `https://mesna.to/`.
+- Keep visible prices, FAQ answers, JSON-LD, and `public/llms.txt` synchronized when the offer changes.

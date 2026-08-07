@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#aa1e22" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <title>mesna.to | Domaće suvo i dimljeno meso online</title>
+    <title>Domaće suvo i dimljeno meso online | mesna.to</title>
     <meta
       name="description"
-      content="mesna.to je online prodavnica domaćeg suvog i dimljenog mesa. Izaberite suvi vrat, pečenicu, dimljenu butkicu, kolenicu i gramažu po meri."
+      content="Domaće suvo i dimljeno meso bez aditiva, iz kućne proizvodnje mesna.to na Umci. Sertifikovano meso, izbor gramaže i dostava po dogovoru."
     />
     <meta
       name="keywords"
-      content="mesnato, mesna to, suvo meso, dimljeno meso, domaće meso, suvi vrat, pečenica, dimljena kolenica"
+      content="najbolje domaće meso, domaće meso online, domaće suvo meso, suvo meso online, dimljeno meso, suvi vrat, pečenica, dimljena kolenica"
     />
     <link rel="canonical" href="https://mesna.to/" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -22,17 +22,17 @@
     <meta property="og:locale" content="sr_RS" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="mesna.to" />
-    <meta property="og:title" content="mesna.to | Domaće suvo i dimljeno meso" />
+    <meta property="og:title" content="Domaće suvo i dimljeno meso online | mesna.to" />
     <meta
       property="og:description"
-      content="Ukus domaćeg na klik. Izaberite proizvod i gramažu, a narudžbinu platite pouzećem."
+      content="Kućna proizvodnja na Umci od sertifikovanog mesa, bez aditiva. Izaberite proizvod i gramažu, a dostavu dogovorite sa proizvođačem."
     />
     <meta property="og:url" content="https://mesna.to/" />
     <meta property="og:image" content="https://mesna.to/vrat.jpeg" />
     <meta property="og:image:alt" content="mesna.to domaći suvi vrat" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="mesna.to | Domaće suvo i dimljeno meso" />
-    <meta name="twitter:description" content="Domaće suvo i dimljeno meso uz jednostavno online poručivanje." />
+    <meta name="twitter:description" content="Domaće suvo i dimljeno meso bez aditiva, iz kućne proizvodnje mesna.to na Umci." />
     <meta name="twitter:image" content="https://mesna.to/vrat.jpeg" />
 
     <script type="application/ld+json">
@@ -45,6 +45,13 @@
             "name": "mesna.to",
             "alternateName": ["Mesnato", "Mesna To"],
             "url": "https://mesna.to/",
+            "description": "Proizvođač domaćeg suvog i dimljenog mesa bez aditiva, sa kućnom proizvodnjom na Umci i sertifikovanim mesom.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Umka",
+              "addressCountry": "RS"
+            },
+            "knowsAbout": ["domaće suvo meso", "dimljeno meso", "proizvodnja mesa bez aditiva"],
             "logo": {
               "@type": "ImageObject",
               "url": "https://mesna.to/logo.png",
@@ -65,8 +72,8 @@
             "@type": "WebPage",
             "@id": "https://mesna.to/#webpage",
             "url": "https://mesna.to/",
-            "name": "mesna.to | Domaće suvo i dimljeno meso online",
-            "description": "mesna.to je online prodavnica domaćeg suvog i dimljenog mesa.",
+            "name": "Domaće suvo i dimljeno meso online | mesna.to",
+            "description": "Domaće suvo i dimljeno meso bez aditiva iz kućne proizvodnje mesna.to na Umci, od sertifikovanog mesa.",
             "isPartOf": { "@id": "https://mesna.to/#website" },
             "about": { "@id": "https://mesna.to/#organization" },
             "inLanguage": "sr-Latn"
@@ -85,7 +92,14 @@
                   "image": "https://mesna.to/vrat.jpeg",
                   "description": "Domaći suvi vrat punog ukusa za meze i posluženja.",
                   "brand": { "@type": "Brand", "name": "mesna.to" },
-                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "url": "https://mesna.to/#suvi-vrat" }
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Suvo meso",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#suvi-vrat", "seller": { "@id": "https://mesna.to/#organization" } }
                 }
               },
               {
@@ -95,8 +109,16 @@
                   "@type": "Product",
                   "name": "Pečenica",
                   "image": "https://mesna.to/pecenica.jpeg",
+                  "description": "Pečenica od pažljivo odabranog mesa, blagog mirisa dima i prijatne teksture.",
                   "brand": { "@type": "Brand", "name": "mesna.to" },
-                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "url": "https://mesna.to/#pecenica" }
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Suvo meso",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#pecenica", "seller": { "@id": "https://mesna.to/#organization" } }
                 }
               },
               {
@@ -106,26 +128,119 @@
                   "@type": "Product",
                   "name": "Dimljena butkica",
                   "image": "https://mesna.to/butkica.jpeg",
+                  "description": "Dimljena butkica za sporo kuvanje, pasulj i bogata tradicionalna jela.",
                   "brand": { "@type": "Brand", "name": "mesna.to" },
-                  "offers": { "@type": "Offer", "price": "850", "priceCurrency": "RSD", "url": "https://mesna.to/#dimljena-butkica" }
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Dimljeno meso",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "850", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#dimljena-butkica", "seller": { "@id": "https://mesna.to/#organization" } }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "Product",
+                  "name": "Dimljena kolenica",
+                  "image": "https://mesna.to/kolenica.jpeg",
+                  "description": "Mesnata dimljena kolenica izraženog ukusa za kuvana jela.",
+                  "brand": { "@type": "Brand", "name": "mesna.to" },
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Dimljeno meso",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "850", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#dimljena-kolenica", "seller": { "@id": "https://mesna.to/#organization" } }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "Product",
+                  "name": "Sušeni but",
+                  "image": "https://mesna.to/but.jpeg",
+                  "description": "Sušeni svinjski but čvrste teksture i punog ukusa za meze.",
+                  "brand": { "@type": "Brand", "name": "mesna.to" },
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Suvo meso",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#suseni-but", "seller": { "@id": "https://mesna.to/#organization" } }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "Product",
+                  "name": "Domaća mast",
+                  "image": "https://mesna.to/mast.jpg",
+                  "description": "Domaća svinjska mast za kuvanje, pečenje ili posluženje na toplom hlebu.",
+                  "brand": { "@type": "Brand", "name": "mesna.to" },
+                  "manufacturer": { "@id": "https://mesna.to/#organization" },
+                  "additionalProperty": [
+                    { "@type": "PropertyValue", "name": "Aditivi", "value": "Bez aditiva" },
+                    { "@type": "PropertyValue", "name": "Sirovina", "value": "Sertifikovano meso" }
+                  ],
+                  "category": "Tradicionalni proizvodi",
+                  "countryOfOrigin": { "@type": "Country", "name": "Srbija" },
+                  "offers": { "@type": "Offer", "price": "250", "priceCurrency": "RSD", "availability": "https://schema.org/LimitedAvailability", "url": "https://mesna.to/#domaca-mast", "seller": { "@id": "https://mesna.to/#organization" } }
                 }
               }
             ]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://mesna.to/#vodic",
+            "headline": "Kako izabrati najbolje domaće meso?",
+            "description": "Vodič za izbor domaćeg suvog i dimljenog mesa za meze, kuvanje i tradicionalnu kuhinju.",
+            "mainEntityOfPage": { "@id": "https://mesna.to/#webpage" },
+            "author": { "@id": "https://mesna.to/#organization" },
+            "publisher": { "@id": "https://mesna.to/#organization" },
+            "dateModified": "2026-08-07",
+            "inLanguage": "sr-Latn",
+            "about": ["domaće meso", "suvo meso", "dimljeno meso"]
           },
           {
             "@type": "FAQPage",
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Kako se poručuju mesna.to proizvodi?",
+                "name": "Šta može da se poruči na mesna.to?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Izaberite proizvod i gramažu, dodajte ih u korpu i unesite podatke za isporuku."
+                  "text": "U ponudi su suvi vrat, pečenica, dimljena butkica, dimljena kolenica, sušeni but i domaća svinjska mast. Poreklo svih proizvoda u aktuelnoj ponudi je Srbija."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Kako se plaća mesna.to narudžbina?",
+                "name": "Koja je najmanja količina za poručivanje?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Najmanja ponuđena količina je 100 grama. Dostupne opcije, od 100 grama do 10 kilograma, videćete kada kliknete na „Izaberi“."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kako se poručuju mesna.to proizvodi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Izaberite proizvod, zatim gramažu i dodajte ga u korpu. U korpi proverite narudžbinu i unesite ime, telefon i adresu za isporuku."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kako se plaća narudžbina?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Plaćanje se vrši pouzećem, prilikom preuzimanja narudžbine."
@@ -136,7 +251,47 @@
                 "name": "Da li su cene prikazane po kilogramu?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Da. Cena je prikazana po kilogramu, a korpa računa iznos za izabranu gramažu."
+                  "text": "Da. Na svakoj kartici proizvoda označena je cena za jedan kilogram, a korpa automatski računa iznos za izabranu gramažu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Da li je potrebna registracija za kupovinu?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nije. Proizvode možete dodati u korpu i poslati narudžbinu bez otvaranja korisničkog naloga."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Koje je najbolje domaće meso za meze, a koje za kuvanje?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Za meze birajte suvi vrat, pečenicu ili sušeni but. Za pasulj i druga sporo kuvana jela pogodnije su dimljena kolenica i dimljena butkica. Najbolji izbor zavisi od jela koje pripremate i ukusa koji želite."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ko proizvodi mesna.to proizvode i gde?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "mesna.to je proizvođač. Proizvodi se pripremaju u kućnoj proizvodnji na Umci, od sertifikovanog mesa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kakav je sastav i da li proizvodi sadrže aditive?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Proizvodi ne sadrže aditive. U suvom mesu sastav je uglavnom meso i so, dok se u kobasicama koriste i začini."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kada se obavlja dostava?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Termin dostave dogovara se nakon poručivanja i zavisi od svežine mesa u konkretnoj narudžbini. mesna.to kontaktira kupca radi potvrde i dogovora."
                 }
               }
             ]

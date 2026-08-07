@@ -1,3 +1,16 @@
+# AI search and answer engines may crawl and cite public content.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: *
 Allow: /
 

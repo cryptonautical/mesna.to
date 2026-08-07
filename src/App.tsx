@@ -97,6 +97,58 @@ const gramOptions = [
   9000, 10000,
 ]
 
+const faqItems = [
+  {
+    question: 'Šta može da se poruči na mesna.to?',
+    answer:
+      'U ponudi su suvi vrat, pečenica, dimljena butkica, dimljena kolenica, sušeni but i domaća svinjska mast. Poreklo svih proizvoda u aktuelnoj ponudi je Srbija.',
+  },
+  {
+    question: 'Kako se poručuju mesna.to proizvodi?',
+    answer:
+      'Izaberite proizvod, zatim gramažu i dodajte ga u korpu. U korpi proverite narudžbinu i unesite ime, telefon i adresu za isporuku.',
+  },
+  {
+    question: 'Koja je najmanja količina za poručivanje?',
+    answer:
+      'Najmanja ponuđena količina je 100 grama. Dostupne opcije, od 100 grama do 10 kilograma, videćete kada kliknete na „Izaberi“.',
+  },
+  {
+    question: 'Kako se plaća narudžbina?',
+    answer: 'Plaćanje se vrši pouzećem, prilikom preuzimanja narudžbine.',
+  },
+  {
+    question: 'Da li su cene prikazane po kilogramu?',
+    answer:
+      'Da. Na svakoj kartici proizvoda označena je cena za jedan kilogram, a korpa automatski računa iznos za izabranu gramažu.',
+  },
+  {
+    question: 'Da li je potrebna registracija za kupovinu?',
+    answer:
+      'Nije. Proizvode možete dodati u korpu i poslati narudžbinu bez otvaranja korisničkog naloga.',
+  },
+  {
+    question: 'Koje je najbolje domaće meso za meze, a koje za kuvanje?',
+    answer:
+      'Za meze birajte suvi vrat, pečenicu ili sušeni but. Za pasulj i druga sporo kuvana jela pogodnije su dimljena kolenica i dimljena butkica. Najbolji izbor zavisi od jela koje pripremate i ukusa koji želite.',
+  },
+  {
+    question: 'Ko proizvodi mesna.to proizvode i gde?',
+    answer:
+      'mesna.to je proizvođač. Proizvodi se pripremaju u kućnoj proizvodnji na Umci, od sertifikovanog mesa.',
+  },
+  {
+    question: 'Kakav je sastav i da li proizvodi sadrže aditive?',
+    answer:
+      'Proizvodi ne sadrže aditive. U suvom mesu sastav je uglavnom meso i so, dok se u kobasicama koriste i začini.',
+  },
+  {
+    question: 'Kada se obavlja dostava?',
+    answer:
+      'Termin dostave dogovara se nakon poručivanja i zavisi od svežine mesa u konkretnoj narudžbini. mesna.to kontaktira kupca radi potvrde i dogovora.',
+  },
+]
+
 const ArrowIcon = () => (
   <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="h-4 w-4">
     <path d="M4 10h12m-4-4 4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -287,8 +339,8 @@ function App() {
       <a href="#main-content" className="skip-link">Pređi na glavni sadržaj</a>
 
       <div className="bg-stone-900 px-4 py-2.5 text-center text-xs font-semibold tracking-wide text-white sm:text-sm">
-        Domaći proizvodi iz Srbije <span className="mx-2 text-gold">•</span> Poručivanje po gramaži
-        <span className="mx-2 text-gold">•</span> Plaćanje pouzećem
+        Kućna proizvodnja na Umci <span className="mx-2 text-gold">•</span> Sertifikovano meso
+        <span className="mx-2 text-gold">•</span> Bez aditiva
       </div>
 
       <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-cream/90 backdrop-blur-xl">
@@ -307,6 +359,7 @@ function App() {
 
           <nav className="hidden items-center gap-8 text-sm font-bold text-stone-700 md:flex" aria-label="Glavna navigacija">
             <a href="#ponuda" className="nav-link">Ponuda</a>
+            <a href="#vodic" className="nav-link">Vodič</a>
             <a href="#kako-poruciti" className="nav-link">Kako poručiti</a>
             <a href="#o-nama" className="nav-link">O nama</a>
             <a href="#pitanja" className="nav-link">Pitanja</a>
@@ -335,11 +388,11 @@ function App() {
             <div className="relative z-10">
               <p className="eyebrow">mesna.to · domaći ukus na klik</p>
               <h1 className="mt-5 max-w-3xl font-display text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.03em] text-stone-900 sm:text-6xl lg:text-[4.5rem]">
-                Suvo i dimljeno meso <span className="text-brand">za pravu trpezu.</span>
+                Domaće suvo i dimljeno meso <span className="text-brand">za pravu trpezu.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">
-                mesna.to donosi odabrane domaće proizvode direktno do vas. Izaberite proizvod i
-                gramažu, a narudžbinu platite pouzećem.
+                mesna.to proizvodi domaće suvo i dimljeno meso na Umci, od sertifikovanog mesa i
+                bez aditiva. Izaberite proizvod i gramažu, a termin dostave dogovaramo sa vama.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href="#ponuda" className="button-primary">
@@ -349,7 +402,7 @@ function App() {
                 <a href="#kako-poruciti" className="button-secondary">Kako funkcioniše?</a>
               </div>
               <ul className="mt-9 grid gap-3 text-sm font-semibold text-stone-700 sm:grid-cols-3" aria-label="Prednosti kupovine">
-                {['Poreklo iz Srbije', 'Od 100 g do 10 kg', 'Plaćanje pouzećem'].map((item) => (
+                {['Proizvođač mesna.to', 'Od 100 g do 10 kg', 'Plaćanje pouzećem'].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand">
                       <CheckIcon />
@@ -404,6 +457,87 @@ function App() {
                 <ProductCard key={product.slug} product={product} onOpen={() => openProduct(product)} />
               ))}
             </div>
+
+            <div className="mt-14 overflow-hidden rounded-[1.75rem] border border-stone-200 bg-stone-50">
+              <div className="border-b border-stone-200 px-5 py-5 sm:px-7">
+                <h3 className="font-display text-2xl font-semibold text-stone-900">Ponuda i cene na jednom mestu</h3>
+                <p className="mt-1 text-sm leading-6 text-stone-600">
+                  Sve cene su u dinarima za jedan kilogram. Konačan iznos zavisi od izabrane gramaže.
+                </p>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                  <caption className="sr-only">Poređenje mesna.to proizvoda, cena, porekla i namene</caption>
+                  <thead className="bg-stone-100 text-xs uppercase tracking-wider text-stone-500">
+                    <tr>
+                      <th scope="col" className="px-5 py-3 font-bold sm:px-7">Proizvod</th>
+                      <th scope="col" className="px-5 py-3 font-bold">Vrsta</th>
+                      <th scope="col" className="px-5 py-3 font-bold">Poreklo</th>
+                      <th scope="col" className="px-5 py-3 text-right font-bold sm:px-7">Cena / kg</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-stone-200 bg-white">
+                    {products.map((product) => (
+                      <tr key={`summary-${product.slug}`}>
+                        <th scope="row" className="px-5 py-4 font-extrabold text-stone-900 sm:px-7">
+                          <a href={`#${product.slug}`} className="hover:text-brand hover:underline">{product.name}</a>
+                        </th>
+                        <td className="px-5 py-4 text-stone-600">{product.cut}</td>
+                        <td className="px-5 py-4 text-stone-600">{product.origin}</td>
+                        <td className="px-5 py-4 text-right font-extrabold text-stone-900 sm:px-7">
+                          {formatRsd(product.price)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="vodic" className="scroll-mt-28 border-b border-stone-200 bg-cream py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="eyebrow justify-center">Vodič za izbor</p>
+              <h2 className="section-title">Kako izabrati najbolje domaće meso?</h2>
+              <p className="section-copy">
+                Najbolje domaće meso nije isto za svaku priliku: za hladno meze tražite pun ukus i
+                dobru teksturu pri sečenju, dok su za pasulj i sporo kuvanje bolji dimljeni komadi.
+                Izbor zato počinje od jela koje želite da pripremite.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
+              <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za meze</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Suvi vrat, pečenica ili sušeni but</h3>
+                <p className="mt-3 text-sm leading-7 text-stone-600">
+                  Suvi vrat daje sočniji i puniji zalogaj, pečenica blaži dimljeni ukus, a sušeni but
+                  čvršću teksturu za tanko sečenje i bogatu dasku.
+                </p>
+              </article>
+              <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za kuvanje</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Dimljena kolenica ili butkica</h3>
+                <p className="mt-3 text-sm leading-7 text-stone-600">
+                  Za pasulj i druga tradicionalna jela birajte mesnatu dimljenu kolenicu ili butkicu.
+                  Ovi komadi su namenjeni sporijem kuvanju i daju jelu izražen dimljeni ukus.
+                </p>
+              </article>
+              <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za kuhinju</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Domaća svinjska mast</h3>
+                <p className="mt-3 text-sm leading-7 text-stone-600">
+                  Domaća mast je tradicionalan izbor za kuvanje i pečenje, ali i za jednostavno
+                  posluženje na toplom hlebu. Na mesna.to može se poručiti po željenoj količini.
+                </p>
+              </article>
+            </div>
+            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-brand/15 bg-brand/5 p-5 text-sm leading-7 text-stone-700 sm:p-6">
+              <strong className="text-stone-900">Gde kupiti domaće meso online?</strong>{' '}
+              Na mesna.to birate proizvod i količinu od 100 g do 10 kg, cenu vidite pre slanja
+              narudžbine, a plaćate pouzećem. Svi proizvodi u aktuelnoj ponudi imaju navedeno poreklo iz Srbije.
+            </div>
           </div>
         </section>
 
@@ -421,7 +555,7 @@ function App() {
                 {[
                   ['01', 'Izaberite', 'Odaberite proizvod i željenu gramažu.'],
                   ['02', 'Unesite podatke', 'Ostavite kontakt i adresu za dostavu.'],
-                  ['03', 'Sačekajte potvrdu', 'Javljamo vam se radi potvrde narudžbine i termina.'],
+                  ['03', 'Dogovorite dostavu', 'Javljamo vam se radi potvrde i termina koji zavisi od svežine mesa.'],
                 ].map(([number, title, text]) => (
                   <li key={number} className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
                     <span className="font-display text-4xl font-bold text-brand/25">{number}</span>
@@ -457,21 +591,29 @@ function App() {
             <div>
               <p className="eyebrow !text-gold">Šta je mesna.to?</p>
               <h2 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-                Domaći proizvodi, predstavljeni bez komplikovanja.
+                Kućna proizvodnja bez aditiva na Umci.
               </h2>
               <p className="mt-6 text-base leading-8 text-white/70 sm:text-lg">
-                mesna.to je online mesto za ljubitelje suvog i dimljenog svinjskog mesa. Naša ponuda
-                okuplja prepoznatljive ukuse domaće trpeze — od suvog vrata i pečenice do dimljene
-                kolenice i domaće masti.
+                mesna.to je proizvođač domaćeg suvog i dimljenog svinjskog mesa. Proizvode pripremamo
+                u kućnoj proizvodnji na Umci, od sertifikovanog mesa i bez aditiva. U suvom mesu
+                sastav je uglavnom meso i so, dok kobasicama ukus daju odabrani začini.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="font-extrabold">Količina po meri</p>
-                  <p className="mt-1 text-sm leading-6 text-white/60">Poručite tačno onoliko koliko vam je potrebno.</p>
+                  <p className="font-extrabold">Kućna proizvodnja na Umci</p>
+                  <p className="mt-1 text-sm leading-6 text-white/60">mesna.to priprema proizvode u maloj, kućnoj proizvodnji.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="font-extrabold">Jasna ponuda</p>
-                  <p className="mt-1 text-sm leading-6 text-white/60">Fotografija, opis i cena svakog proizvoda.</p>
+                  <p className="font-extrabold">Bez aditiva</p>
+                  <p className="mt-1 text-sm leading-6 text-white/60">Jednostavan sastav: meso, so i, kod kobasica, začini.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="font-extrabold">Sertifikovano meso</p>
+                  <p className="mt-1 text-sm leading-6 text-white/60">Za proizvodnju se koristi sertifikovano meso.</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="font-extrabold">Dostava po dogovoru</p>
+                  <p className="mt-1 text-sm leading-6 text-white/60">Termin zavisi od svežine mesa u vašoj narudžbini.</p>
                 </div>
               </div>
             </div>
@@ -483,14 +625,13 @@ function App() {
             <div className="text-center">
               <p className="eyebrow justify-center">Česta pitanja</p>
               <h2 className="section-title">Sve o mesna.to poručivanju</h2>
+              <p className="section-copy">
+                Ukratko: mesna.to proizvodi domaće suvo i dimljeno svinjsko meso bez aditiva na Umci,
+                od sertifikovanog mesa, uz izbor količine i dostavu po dogovoru.
+              </p>
             </div>
             <div className="mt-10 divide-y divide-stone-200 border-y border-stone-200">
-              {[
-                ['Kako se poručuju mesna.to proizvodi?', 'Izaberite proizvod, zatim gramažu i dodajte ga u korpu. U korpi proverite narudžbinu i unesite podatke za isporuku.'],
-                ['Koja je najmanja količina za poručivanje?', 'Za većinu proizvoda možete izabrati količinu već od 100 grama. Dostupne opcije videćete nakon što kliknete na „Izaberi“.'],
-                ['Kako se plaća narudžbina?', 'Plaćanje se vrši pouzećem, prilikom preuzimanja narudžbine.'],
-                ['Da li su cene prikazane po kilogramu?', 'Da. Na svakoj kartici proizvoda jasno je označena cena za jedan kilogram, a korpa automatski računa iznos za izabranu gramažu.'],
-              ].map(([question, answer]) => (
+              {faqItems.map(({ question, answer }) => (
                 <details key={question} className="group py-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-extrabold text-stone-900">
                     {question}
@@ -511,11 +652,12 @@ function App() {
               <img src="/logo.png" alt="" width="56" height="56" className="h-14 w-14 object-contain" />
               <div>
                 <p className="font-display text-2xl font-bold">mesna<span className="text-brand-light">.to</span></p>
-                <p className="text-sm text-white/55">Domaće suvo i dimljeno meso</p>
+                <p className="text-sm text-white/55">Kućna proizvodnja bez aditiva na Umci</p>
               </div>
             </a>
             <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/70" aria-label="Navigacija u podnožju">
               <a href="#ponuda" className="hover:text-white">Ponuda</a>
+              <a href="#vodic" className="hover:text-white">Vodič za izbor</a>
               <a href="#kako-poruciti" className="hover:text-white">Kako poručiti</a>
               <a href="#o-nama" className="hover:text-white">O nama</a>
               <a href="#pitanja" className="hover:text-white">Česta pitanja</a>
@@ -693,13 +835,13 @@ function App() {
                 <button type="submit" className="button-primary w-full disabled:cursor-not-allowed disabled:opacity-60" disabled={isSendingOrder}>
                   {isSendingOrder ? 'Šaljemo narudžbinu…' : `Potvrdi · ${formatRsd(totalPrice)}`}
                 </button>
-                <p className="text-center text-xs leading-5 text-stone-500">Kontaktiraćemo vas radi potvrde narudžbine i termina isporuke.</p>
+                <p className="text-center text-xs leading-5 text-stone-500">Kontaktiraćemo vas radi potvrde i dogovora o terminu, koji zavisi od svežine mesa.</p>
               </form>
             ) : (
               <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center">
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-white"><CheckIcon /></span>
                 <h3 className="mt-4 text-lg font-extrabold text-emerald-950">Hvala na narudžbini!</h3>
-                <p className="mt-2 text-sm leading-6 text-emerald-800">Narudžbina je uspešno zabeležena. Javićemo vam se radi potvrde.</p>
+                <p className="mt-2 text-sm leading-6 text-emerald-800">Narudžbina je uspešno zabeležena. Javićemo vam se radi potvrde i dogovora o dostavi.</p>
                 <button type="button" className="button-secondary mt-5" onClick={() => setIsCheckoutOpen(false)}>Završi</button>
               </div>
             )}
