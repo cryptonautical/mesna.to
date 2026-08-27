@@ -30,65 +30,25 @@ const formatWeight = (grams: number) =>
 
 const products: Product[] = [
   {
-    name: 'Suvi vrat',
-    slug: 'suvi-vrat',
-    cut: 'Suvo meso',
-    price: 1500,
-    origin: 'Srbija',
-    badge: 'Najtraženije',
-    description: 'Sočan suvi vrat punog, zaokruženog ukusa. Odličan za meze, sendviče i posluženja.',
-    image: '/vrat.jpeg',
-    alt: 'mesna.to domaći suvi vrat, isečen i spreman za posluženje',
-  },
-  {
-    name: 'Pečenica',
-    slug: 'pecenica',
-    cut: 'Suvo meso',
-    price: 1500,
-    origin: 'Srbija',
-    description: 'Pečenica od pažljivo odabranog mesa, blagog mirisa dima i prijatne teksture.',
-    image: '/pecenica.jpeg',
-    alt: 'mesna.to domaća suva pečenica u komadu',
-  },
-  {
-    name: 'Dimljena butkica',
-    slug: 'dimljena-butkica',
-    cut: 'Dimljeno meso',
+    name: 'Sveže domaće svinjske kobasice',
+    slug: 'sveze-domace-svinjske-kobasice',
+    cut: 'Sveže meso',
     price: 850,
     origin: 'Srbija',
-    description: 'Dimljena butkica za sporo kuvanje, pasulj i bogata tradicionalna jela.',
-    image: '/butkica.jpeg',
-    alt: 'mesna.to dimljena svinjska butkica vakumirana za isporuku',
+    badge: 'U prvom planu',
+    description: 'Sveže domaće svinjske kobasice sa pažljivo odabranim začinima. Poručite količinu po meri i pripremite ih na svoj način.',
+    image: '/kobasice-instagram.jpeg',
+    alt: 'mesna.to sveže domaće svinjske kobasice u vakumiranom pakovanju',
   },
   {
-    name: 'Dimljena kolenica',
-    slug: 'dimljena-kolenica',
-    cut: 'Dimljeno meso',
-    price: 850,
+    name: 'Domaća slanina',
+    slug: 'domaca-slanina',
+    cut: 'Suhomesnato',
+    price: 1400,
     origin: 'Srbija',
-    description: 'Mesnata dimljena kolenica izraženog ukusa, spremna za vaša omiljena kuvana jela.',
-    image: '/kolenica.jpeg',
-    alt: 'mesna.to domaća dimljena svinjska kolenica',
-  },
-  {
-    name: 'Sušeni but',
-    slug: 'suseni-but',
-    cut: 'Suvo meso',
-    price: 1500,
-    origin: 'Srbija',
-    description: 'Sušeni svinjski but čvrste teksture i punog ukusa, za bogatu dasku sa mezom.',
-    image: '/but.jpeg',
-    alt: 'mesna.to sušeni svinjski but na drvenoj dasci',
-  },
-  {
-    name: 'Domaća mast',
-    slug: 'domaca-mast',
-    cut: 'Tradicionalno',
-    price: 250,
-    origin: 'Srbija',
-    description: 'Domaća svinjska mast za kuvanje, pečenje ili jednostavno posluženje na toplom hlebu.',
-    image: '/mast.jpg',
-    alt: 'mesna.to bela domaća svinjska mast u drvenoj posudi',
+    description: 'Domaća slanina sa punim ukusom i prijatnim odnosom mesa i masnoće. Jedini suhomesnati proizvod trenutno u ponudi.',
+    image: '/slanina-instagram.jpeg',
+    alt: 'mesna.to domaća slanina u vakumiranom pakovanju',
   },
 ]
 
@@ -101,7 +61,7 @@ const faqItems = [
   {
     question: 'Šta može da se poruči na mesna.to?',
     answer:
-      'U ponudi su suvi vrat, pečenica, dimljena butkica, dimljena kolenica, sušeni but i domaća svinjska mast. Poreklo svih proizvoda u aktuelnoj ponudi je Srbija.',
+      'U aktuelnoj ponudi su sveže domaće svinjske kobasice i domaća slanina. Slanina je trenutno jedini suhomesnati proizvod. Poreklo proizvoda je Srbija.',
   },
   {
     question: 'Kako se poručuju mesna.to proizvodi?',
@@ -130,17 +90,17 @@ const faqItems = [
   {
     question: 'Koje je najbolje domaće meso za meze, a koje za kuvanje?',
     answer:
-      'Za meze birajte suvi vrat, pečenicu ili sušeni but. Za pasulj i druga sporo kuvana jela pogodnije su dimljena kolenica i dimljena butkica. Najbolji izbor zavisi od jela koje pripremate i ukusa koji želite.',
+      'Za brzo pečenje i roštilj birajte sveže domaće svinjske kobasice, a za meze domaću slaninu. Najbolji izbor zavisi od jela koje pripremate i ukusa koji želite.',
   },
   {
     question: 'Ko proizvodi mesna.to proizvode i gde?',
     answer:
-      'mesna.to je proizvođač. Proizvodi se pripremaju u kućnoj proizvodnji na Umci, od sertifikovanog mesa.',
+      'mesna.to je proizvođač. Sveže kobasice i slanina pripremaju se u kućnoj proizvodnji na Umci, od sertifikovanog mesa.',
   },
   {
     question: 'Kakav je sastav i da li proizvodi sadrže aditive?',
     answer:
-      'Proizvodi ne sadrže aditive. U suvom mesu sastav je uglavnom meso i so, dok se u kobasicama koriste i začini.',
+      'Proizvodi ne sadrže aditive. U kobasicama se koriste meso, so i odabrani začini, dok slanina ima jednostavan sastav od mesa i soli.',
   },
   {
     question: 'Kada se obavlja dostava?',
@@ -388,11 +348,11 @@ function App() {
             <div className="relative z-10">
               <p className="eyebrow">mesna.to · domaći ukus na klik</p>
               <h1 className="mt-5 max-w-3xl font-display text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.03em] text-stone-900 sm:text-6xl lg:text-[4.5rem]">
-                Domaće suvo i dimljeno meso <span className="text-brand">za pravu trpezu.</span>
+                Sveže domaće svinjske kobasice <span className="text-brand">za pravu trpezu.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">
-                mesna.to proizvodi domaće suvo i dimljeno meso na Umci, od sertifikovanog mesa i
-                bez aditiva. Izaberite proizvod i gramažu, a termin dostave dogovaramo sa vama.
+                mesna.to priprema sveže domaće svinjske kobasice na Umci, od sertifikovanog mesa i
+                bez aditiva. Trenutno je u ponudi i domaća slanina, a termin dostave dogovaramo sa vama.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href="#ponuda" className="button-primary">
@@ -416,8 +376,8 @@ function App() {
             <div className="relative mx-auto w-full max-w-2xl lg:mx-0">
               <div className="relative overflow-hidden rounded-[2rem] bg-stone-900 shadow-2xl sm:rounded-[2.5rem]">
                 <img
-                  src="/vrat.jpeg"
-                  alt="mesna.to domaći suvi vrat pripremljen za meze"
+                  src="/kobasice-instagram.jpeg"
+                  alt="mesna.to sveže domaće svinjske kobasice u vakumiranom pakovanju"
                   width="920"
                   height="900"
                   fetchPriority="high"
@@ -426,18 +386,18 @@ function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white sm:p-8">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Najtraženije</p>
-                    <p className="mt-1 font-display text-3xl font-semibold">Suvi vrat</p>
-                    <p className="mt-1 text-sm text-white/75">Pun ukus domaćeg mesa</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">U prvom planu</p>
+                    <p className="mt-1 font-display text-3xl font-semibold">Sveže domaće kobasice</p>
+                    <p className="mt-1 text-sm text-white/75">Tradicionalni ukus, spremne za roštilj</p>
                   </div>
                   <p className="rounded-full bg-white px-4 py-2 text-sm font-extrabold text-stone-900">
-                    {formatRsd(1500)} / kg
+                    {formatRsd(850)} / kg
                   </p>
                 </div>
               </div>
               <div className="absolute -bottom-7 -left-3 hidden w-48 rotate-[-4deg] rounded-2xl border border-white/80 bg-white p-3 shadow-xl sm:block">
-                <img src="/mast.jpg" alt="" width="200" height="120" className="h-24 w-full rounded-xl object-cover" />
-                <p className="mt-2 text-center text-xs font-extrabold text-stone-800">I nešto za na hleb.</p>
+                <img src="/slanina-instagram.jpeg" alt="Domaća slanina" width="200" height="120" className="h-24 w-full rounded-xl object-cover" />
+                <p className="mt-2 text-center text-xs font-extrabold text-stone-800">Za meze: domaća slanina.</p>
               </div>
             </div>
           </div>
@@ -449,10 +409,10 @@ function App() {
               <p className="eyebrow justify-center">mesna.to ponuda</p>
               <h2 className="section-title">Odaberite ukus domaćeg</h2>
               <p className="section-copy">
-                Jasna cena po kilogramu, količina po vašoj meri i jednostavno online poručivanje.
+                Sveže kobasice su u prvom planu, uz domaću slaninu kao jedini suhomesnati proizvod. Jasna cena po kilogramu, količina po vašoj meri i jednostavno online poručivanje.
               </p>
             </div>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
               {products.map((product) => (
                 <ProductCard key={product.slug} product={product} onOpen={() => openProduct(product)} />
               ))}
@@ -460,7 +420,7 @@ function App() {
 
             <div className="mt-14 overflow-hidden rounded-[1.75rem] border border-stone-200 bg-stone-50">
               <div className="border-b border-stone-200 px-5 py-5 sm:px-7">
-                <h3 className="font-display text-2xl font-semibold text-stone-900">Ponuda i cene na jednom mestu</h3>
+                <h3 className="font-display text-2xl font-semibold text-stone-900">Aktuelna ponuda i cene</h3>
                 <p className="mt-1 text-sm leading-6 text-stone-600">
                   Sve cene su u dinarima za jedan kilogram. Konačan iznos zavisi od izabrane gramaže.
                 </p>
@@ -502,41 +462,41 @@ function App() {
               <p className="eyebrow justify-center">Vodič za izbor</p>
               <h2 className="section-title">Kako izabrati najbolje domaće meso?</h2>
               <p className="section-copy">
-                Najbolje domaće meso nije isto za svaku priliku: za hladno meze tražite pun ukus i
-                dobru teksturu pri sečenju, dok su za pasulj i sporo kuvanje bolji dimljeni komadi.
-                Izbor zato počinje od jela koje želite da pripremite.
+                Sveže domaće kobasice su odlične za roštilj i tiganj, dok slanina donosi pun ukus
+                domaćeg mesa na dasku za meze i u tradicionalna jela. Izbor počinje od prilike za
+                koju pripremate obrok.
               </p>
             </div>
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za roštilj</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Sveže domaće svinjske kobasice</h3>
+                <p className="mt-3 text-sm leading-7 text-stone-600">
+                  Kobasice su sveže i spremne za pečenje. Napravite ih na roštilju, u tiganju ili
+                  u rerni i poslužite uz prilog po izboru.
+                </p>
+              </article>
+              <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
                 <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za meze</p>
-                <h3 className="mt-3 font-display text-2xl font-semibold">Suvi vrat, pečenica ili sušeni but</h3>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Domaća slanina</h3>
                 <p className="mt-3 text-sm leading-7 text-stone-600">
-                  Suvi vrat daje sočniji i puniji zalogaj, pečenica blaži dimljeni ukus, a sušeni but
-                  čvršću teksturu za tanko sečenje i bogatu dasku.
+                  Slanina je trenutno jedini suhomesnati proizvod u ponudi. Isecite je tanko za
+                  meze ili je upotrebite kao dodatak kuvanim i pečenim jelima.
                 </p>
               </article>
               <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
-                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za kuvanje</p>
-                <h3 className="mt-3 font-display text-2xl font-semibold">Dimljena kolenica ili butkica</h3>
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za svaki dan</p>
+                <h3 className="mt-3 font-display text-2xl font-semibold">Količina po vašoj meri</h3>
                 <p className="mt-3 text-sm leading-7 text-stone-600">
-                  Za pasulj i druga tradicionalna jela birajte mesnatu dimljenu kolenicu ili butkicu.
-                  Ovi komadi su namenjeni sporijem kuvanju i daju jelu izražen dimljeni ukus.
-                </p>
-              </article>
-              <article className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-7">
-                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand">Za kuhinju</p>
-                <h3 className="mt-3 font-display text-2xl font-semibold">Domaća svinjska mast</h3>
-                <p className="mt-3 text-sm leading-7 text-stone-600">
-                  Domaća mast je tradicionalan izbor za kuvanje i pečenje, ali i za jednostavno
-                  posluženje na toplom hlebu. Na mesna.to može se poručiti po željenoj količini.
+                  Izaberite od 100 g do 10 kg. Kobasice su 850 RSD/kg, a tačan iznos za izabranu
+                  količinu vidite odmah u korpi.
                 </p>
               </article>
             </div>
             <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-brand/15 bg-brand/5 p-5 text-sm leading-7 text-stone-700 sm:p-6">
               <strong className="text-stone-900">Gde kupiti domaće meso online?</strong>{' '}
               Na mesna.to birate proizvod i količinu od 100 g do 10 kg, cenu vidite pre slanja
-              narudžbine, a plaćate pouzećem. Svi proizvodi u aktuelnoj ponudi imaju navedeno poreklo iz Srbije.
+              narudžbine, a plaćate pouzećem. Sveže kobasice i domaća slanina u aktuelnoj ponudi imaju navedeno poreklo iz Srbije.
             </div>
           </div>
         </section>
@@ -572,16 +532,16 @@ function App() {
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-20 lg:px-8">
             <div className="grid grid-cols-2 gap-3">
               <img
-                src="/pecenica.jpeg"
-                alt="Domaća suva pečenica iz mesna.to ponude"
+                src="/kobasice-instagram-detail.jpeg"
+                alt="Sveže domaće svinjske kobasice iz mesna.to ponude"
                 loading="lazy"
                 width="500"
                 height="650"
                 className="h-72 w-full rounded-[1.75rem] object-cover sm:h-[420px]"
               />
               <img
-                src="/but.jpeg"
-                alt="Domaći sušeni but iz mesna.to ponude"
+                src="/slanina-instagram.jpeg"
+                alt="Domaća slanina iz mesna.to ponude"
                 loading="lazy"
                 width="500"
                 height="650"
@@ -591,12 +551,12 @@ function App() {
             <div>
               <p className="eyebrow !text-gold">Šta je mesna.to?</p>
               <h2 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-                Kućna proizvodnja bez aditiva na Umci.
+                Sveže kobasice i slanina iz kućne proizvodnje na Umci.
               </h2>
               <p className="mt-6 text-base leading-8 text-white/70 sm:text-lg">
-                mesna.to je proizvođač domaćeg suvog i dimljenog svinjskog mesa. Proizvode pripremamo
-                u kućnoj proizvodnji na Umci, od sertifikovanog mesa i bez aditiva. U suvom mesu
-                sastav je uglavnom meso i so, dok kobasicama ukus daju odabrani začini.
+                mesna.to je proizvođač svežih domaćih svinjskih kobasica i domaće slanine. Proizvode
+                pripremamo u kućnoj proizvodnji na Umci, od sertifikovanog mesa i bez aditiva. U
+                kobasicama ukus daju odabrani začini, a slanina se priprema sa jednostavnim sastavom.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -605,7 +565,7 @@ function App() {
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <p className="font-extrabold">Bez aditiva</p>
-                  <p className="mt-1 text-sm leading-6 text-white/60">Jednostavan sastav: meso, so i, kod kobasica, začini.</p>
+                  <p className="mt-1 text-sm leading-6 text-white/60">Jednostavan sastav: meso, so i odabrani začini.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <p className="font-extrabold">Sertifikovano meso</p>
@@ -626,8 +586,8 @@ function App() {
               <p className="eyebrow justify-center">Česta pitanja</p>
               <h2 className="section-title">Sve o mesna.to poručivanju</h2>
               <p className="section-copy">
-                Ukratko: mesna.to proizvodi domaće suvo i dimljeno svinjsko meso bez aditiva na Umci,
-                od sertifikovanog mesa, uz izbor količine i dostavu po dogovoru.
+                Ukratko: mesna.to priprema sveže domaće svinjske kobasice i domaću slaninu bez aditiva
+                na Umci, od sertifikovanog mesa, uz izbor količine i dostavu po dogovoru.
               </p>
             </div>
             <div className="mt-10 divide-y divide-stone-200 border-y border-stone-200">
